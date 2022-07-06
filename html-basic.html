@@ -1,5 +1,4 @@
 <!DOCTYPE html>
-
 <html lang="en">
 
 <head>
@@ -7,6 +6,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Document</title>
+  <link rel="icon" href="xxx.ico">
 </head>
 
 <body>
@@ -17,28 +17,23 @@
     <h3>Lorem, ipsum dolor.</h3>
   </hgroup>
 
-  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla iure at laboriosam neque deserunt officia? Veritatis odit laudantium placeat, quos molestias numquam. Perferendis quo facilis dignissimos natus, provident consequuntur ea!</p>
-  <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. At vitae assumenda placeat officiis, quidem omnis totam ea praesentium blanditiis voluptates corporis nemo enim. Aperiam architecto dignissimos velit praesentium fugit quae!</p>
-  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nihil, doloremque.</p>
-
-  <a href="https://www.jd.com/" target="_blank">在新窗口打开京东</a>
-
-  <a href="mailto:xxxxx@xxx.com">点我发邮件</a>
-
-  <a href="#dibu">跳到页面底部</a>
-
-  <a href="xxx" download="xxx。txt">点我下载文件</a>
+  <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Repudiandae est aliquam omnis aliquid numquam maiores, assumenda consequatur soluta qui illo ab vel odio, aspernatur minima iusto dolor! Eaque, molestiae rem!</p>
+  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus reiciendis, repudiandae ducimus optio facere ex error, iure earum nihil et esse neque numquam consequuntur! Placeat dicta ex praesentium? Totam, nobis.</p>
+  <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Et, eligendi?</p>
 
   <div>
-    <img src="https://drscdn.500px.org/photo/229389427/m%3D1170/v2?user_id=7012987&webp=true&sig=196fa0c161aa562478d08571764872f7d69a346c3c0b2e12aa00e2c6414eb28b"
-       width="200" height="200" alt="">
+    <a href="https://www.jd.com/" target="_blank">在新窗口打开京东</a>
+    <a href="mailto:xxx@qq.com">点我发邮件</a>
+    <a href="#dibu">跳到页面底部</a>
+    <a href="file.txt" download="file">点我下载文件</a>
   </div>
 
+  <img src="https://drscdn.500px.org/photo/229389427/m%3D1170/v2?user_id=7012987&webp=true&sig=196fa0c161aa562478d08571764872f7d69a346c3c0b2e12aa00e2c6414eb28b" width="200" height="200" alt="">
 
   <hr>
   <hr>
 
-  <marquee>piao</marquee>
+  <marquee behavior="" direction="">piao</marquee>
 
   <div>
     <em>这几种强调</em>
@@ -48,14 +43,13 @@
     <i>这个？</i>
   </div>
 
-  <p>&it;!--这段注释需要出现在页面里面--></p>
+  &lt;!--这段注释需要出现在页面里面-->
 
   <pre><code>
 
     function a() {
       return 8
     }
-
   </code></pre>
 
   <hr>
@@ -80,7 +74,6 @@
   <hr>
 
   <dl>
-
     <dt>班级</dt>
     <dd>三年二班</dd>
 
@@ -91,16 +84,15 @@
 
     <dt>学生</dt>
     <dd>小明</dd>
-    <dd>小明</dd>
+    <dd>豆豆</dd>
   </dl>
 
   <hr>
 
   <h2>Google搜索</h2>
-
   <form target="_blank" action="https://www.google.com">
-    <input type="text" name="" id="">
-    <button type="submit">在新窗口打开搜索结果</button>
+    <input type="text" placeholder="请搜索" >
+    <button type="submit" >在新窗口打开搜索结果</button>
   </form>
 
   <hr>
@@ -109,19 +101,19 @@
     <p>个人信息调查表</p>
 
     <dl>
-
       <dt>性别</dt>
       <dd>
         <label>
-          <input type="radio" name="gender" value="male">男
-          <input type="radio" name="gender" value="female">女
+          <input type="radio" value="male" name="genter">男
+          <input type="radio" value="female" name="genter">女
         </label>
       </dd>
 
       <dt>年龄</dt>
       <dd>
-        <select name="" id="">
-          <option hidden>请选择</option>
+        <select name="age" id="">
+          <option value="" hidden>请选择</option>
+
           <optgroup label="少年">
             <option value="">1到6岁</option>
             <option value="">6到12岁</option>
@@ -134,25 +126,25 @@
 
           <optgroup label="少年">
             <option value="">1到6岁</option>
-            <option value="">6到12岁</option>
+            <option value="">1到6岁</option>
           </optgroup>
         </select>
       </dd>
 
       <dt>生日</dt>
       <dd>
-        <input type="date" name="birthday" value="2021-11-04">
+        <input name="birthday" type="date" value="2021-11-04">
       </dd>
 
       <dt>生辰</dt>
       <dd>
-        <input type="time" name="birthtime" value="">
+        <input type="time" name="birthtime" id="">
       </dd>
 
       <dt>照片</dt>
       <dd>
-        <input type="file" hidden name="yourphoto" id="photo">
-        <label for="photo">点我上传照片，我比文件上传按钮好看</label>
+        <input type="file" name="photo" id="photo1" hidden>
+        <label for="photo1">点我上传照片，我比文件上传按钮更好看</label>
       </dd>
 
       <dt>自我介绍</dt>
@@ -163,21 +155,90 @@
 
     <fieldset disabled>
       <legend>这里全部禁用了</legend>
-        <input type="text" name="" id="">
-        <input type="text" name="" id="">
-        <input type="text" name="" id="">
-        <input type="text" name="" id="">
+      <input type="text" name="" id="">
+      <input type="text" name="" id="">
+      <input type="text" name="" id="">
+      <input type="text" name="" id="">
     </fieldset>
 
     <button>提交</button>
-    <button type="reast">重置</button>
-
+    <button type="reset">重置</button>
   </form>
 
   <hr>
 
+  <table border="2">
+    <caption>练习</caption>
 
+    <colgroup>
+      <col>
+      <col bgcolor="red">
+      <col>
+      <col>
+    </colgroup>
 
+    <thead>
+      <tr>
+        <th>编号</th>
+        <th>品名</th>
+        <th>进价</th>
+        <th>出价</th>
+      </tr>
+    </thead>
+
+    <tbody>
+      <tr>
+        <th>aaa</th>
+        <td>a</td>
+        <td rowspan="2">a</td>
+        <td>a</td>
+      </tr>
+
+      <tr>
+        <th>a</th>
+        <td>a</td>
+        <td>a</td>
+      </tr>
+
+      <tr>
+        <th>a</th>
+        <td>a</td>
+        <td>a</td>
+        <td>a</td>
+      </tr>
+
+      <tr>
+        <th>a</th>
+        <td>a</td>
+        <td>a</td>
+        <td>a</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <hr>
+
+  <img src="https://drscdn.500px.org/photo/174778125/m%3D1170_k%3D1/2841ccf2a3720e8e794a6a6930f6ff2c" usemap="map1" alt="">
+  <map name="map1">
+    <area shape="rect" coords="" href="https://www.jd.com/" alt="">
+  </map>
+
+  <hr>
+
+  <a href="https://www.mi.com" target="fafa">小米</a>
+
+  <br>
+
+  <iframe src="https://www.jd.com/" name="fafa" frameborder="1"></iframe>
+
+  <div>aaa&nbsp;&nbsp;&nbsp;&nbsp;bbbbb
+  </div>
+
+  <pre>
+    aaa    bbbbb
+  </pre>
+
+  >>>>>>>>>>>>><<<<<<<<<<<<<&lt;span>&lt;/span>
 
   <div id="dibu"></div>
 
