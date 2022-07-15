@@ -71,7 +71,33 @@
       text-align: center;
     }
 
+    #d2 {
+      width: 600px;
+      margin: auto;
+      xline-height: 50px;
+      font-size: 0;
+    }
 
+    #d2 div:hover {
+      background-color: red;
+    }
+
+    #d2 div {
+      font-size: 16px;
+      display: inline-block;
+      background-color: pink;
+      border: 3px solid;
+      width: 174px;
+      height: 34px;
+      text-align: center;
+      line-height: 34px;
+      margin-bottom: 15px;
+    }
+
+    #d2 div:not(:nth-child(3n+1)) {
+      margin-left: 30px;
+
+    }
 
 
   </style>
@@ -95,6 +121,24 @@
     <div>产品</div>
     <div>产品</div>
   </div>
+
+
+  <div id="d2">
+    <div>宽180高40(包含边框)</div>
+    <div>产品</div>
+    <div>产品</div>
+    <div>水平间隙30px</div>
+    <div>产品</div>
+    <div>产品</div>
+    <div>垂直间隙15px</div>
+    <div>产品</div>
+    <div>产品</div>
+    <div>边框宽度3px</div>
+    <div>产品</div>
+    <div>产品</div>
+  </div>
+
+
     <p class="p3">link</p>
     <p class="p3">link</p>
     <p class="p3">link</p>
