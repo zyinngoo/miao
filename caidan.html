@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<style>
+
+  body div {
+    border: 1px solid;
+    width: 100px;
+    height: 30px;
+    box-sizing: border-box;
+    text-align: center;
+    line-height: 25px;
+  }
+  div,.li1 {
+    display: inline-block;
+    position: relative;
+  }
+
+  div ul,.u2 {
+    list-style: none;
+    display: none;
+    position: absolute;
+    margin: 0;
+    padding: 0;
+    width: 180px;
+    left: 0;
+    top: 100%;
+    background-color: rgb(37, 37, 38);
+    color: white;
+    text-align: left;
+    xpadding: 10px;
+
+  }
+
+  ul li{
+    xmargin: 10px;
+    padding: 10px;
+
+  }
+
+  div:hover > ul {
+    display: block;
+
+  }
+
+  div ul li:hover {
+    background-color: rgb(4, 57, 94);
+
+  }
+
+  .li1:hover > .u2 {
+    display: block;
+  }
+
+
+
+  .u2 {
+    border: 1px solid white;
+    margin-left: 120px;
+    margin-top: -30px;
+  }
+
+
+</style>
+<body>
+
+  <div class="d1">文件(f)
+    <ul class="u1">
+      <li>新建文本文件</li>
+      <li>新建文件</li>
+      <li>新建窗口</li>
+      <hr>
+      <li>打开文件</li>
+      <li>打开文件夹</li>
+      <li>从文件打开工作区</li>
+      <li class="li1">打开最近的文件 >
+          <ul class="u2">
+            <li>1</li>
+            <li>3</li>
+            <li>5</li>
+            <li>6</li>
+            <li>8</li>
+          </ul>
+
+      </li>
+      <hr>
+      <li>将文件夹添加到工作区</li>
+      <li>将工作区另存为</li>
+      <li>复制工作区</li>
+      <hr>
+      <li>保存</li>
+      <li>另存为</li>
+      <li>全部保存</li>
+      <hr>
+      <li>共享</li>
+      <hr>
+      <li>自动保存</li>
+      <li>首选项</li>
+      <hr>
+      <li>还原文件</li>
+      <li>关闭编辑器</li>
+      <li>关闭文件夹</li>
+      <li>关闭窗口</li>
+      <hr>
+      <li>退出</li>
+    </ul>
+  </div>
+
+  <div class="d2">编辑(e)
+    <ul>
+      <li>撤销</li>
+      <li>恢复</li>
+      <hr>
+      <li>剪切</li>
+      <li>复制</li>
+      <li>粘贴</li>
+      <hr>
+      <li>查找</li>
+      <li>替换</li>
+    </ul>
+  </div>
+</body>
+</html>
