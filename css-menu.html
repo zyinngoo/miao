@@ -16,9 +16,24 @@
     text-align: center;
     line-height: 25px;
   }
-  div,.li1 {
+  div {
     display: inline-block;
     position: relative;
+  }
+
+  .li1 {
+    position: relative;
+  }
+
+  .d1 li {
+    padding-right: 15px;
+  }
+
+  li.sep {
+    border-top: 1px solid;
+    margin-top: 0.5em;
+    margin-bottom: 0.5em;
+    padding: 0;
   }
 
   div ul,.u2 {
@@ -28,14 +43,21 @@
     position: absolute;
     margin: 0;
     padding: 0;
-    width: 180px;
+    xwidth: 200px;
     left: 0;
     top: 100%;
     background-color: rgb(37, 37, 38);
     color: white;
     text-align: left;
     xpadding: 10px;
+    white-space: nowrap;
 
+  }
+
+  li > span {
+    position: absolute;
+    right: 0px;
+    xtop: 0;
   }
 
   ul li{
@@ -62,8 +84,8 @@
 
   .u2 {
     border: 1px solid white;
-    margin-left: 120px;
-    margin-top: -30px;
+    left: 100%;
+    top: 0;
   }
 
 
@@ -75,11 +97,12 @@
       <li>新建文本文件</li>
       <li>新建文件</li>
       <li>新建窗口</li>
-      <hr>
+      <li class="sep"></li>
       <li>打开文件</li>
       <li>打开文件夹</li>
       <li>从文件打开工作区</li>
-      <li class="li1">打开最近的文件 >
+      <li class="li1">打开最近的文件
+        <span>></span>
           <ul class="u2">
             <li>1</li>
             <li>3</li>
@@ -89,25 +112,25 @@
           </ul>
 
       </li>
-      <hr>
+      <li class="sep"></li>
       <li>将文件夹添加到工作区</li>
       <li>将工作区另存为</li>
       <li>复制工作区</li>
-      <hr>
+      <li class="sep"></li>
       <li>保存</li>
       <li>另存为</li>
       <li>全部保存</li>
-      <hr>
+      <li class="sep"></li>
       <li>共享</li>
-      <hr>
+      <li class="sep"></li>
       <li>自动保存</li>
       <li>首选项</li>
-      <hr>
+      <li class="sep"></li>
       <li>还原文件</li>
       <li>关闭编辑器</li>
       <li>关闭文件夹</li>
       <li>关闭窗口</li>
-      <hr>
+      <li class="sep"></li>
       <li>退出</li>
     </ul>
   </div>
