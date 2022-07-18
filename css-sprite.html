@@ -37,7 +37,7 @@
       background-position: -40px ;
       width: 40px;
       height: 40px;
-      position: absolute;
+      xposition: absolute;
       top: 16%;
       right: 29%;
     }
@@ -48,6 +48,12 @@
       background-position: -87px ;
       width: 40px;
       height: 40px;
+      position: relative;
+      left: 2px;
+    }
+
+    .dd {
+      display: inline-block;
       position: absolute;
       top: 16%;
       right: 25%;
@@ -101,10 +107,11 @@
 <body>
   <div>
     <input type="text" placeholder="请输入关键字">
-    <div class="mic"></div>
-    <div class="glass"> </div>
-  </div>
-  <div>
+    <div class="dd">
+      <div class="mic"></div>
+      <div class="glass"> </div>
+    </div>
+
     <div  class="d1"></div>
     <div  class="d2"></div>
     <div  class="d3"></div>
