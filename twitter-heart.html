@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+
+  <style>
+
+    body {
+      margin: 0;
+    }
+
+    .d1 {
+      background-image: url(heart.png);
+      background-position: left;
+      width: 100px;
+      height: 100px;
+      margin: auto;
+
+    }
+
+    .d1:hover {
+      background-position: right;
+      transition: background-position 1s steps(28);
+    }
+
+    .d2 {
+      margin: auto;
+      width: 100px;
+      height: 100px;
+      overflow: hidden;
+      position: relative;
+    }
+
+    img {
+      position: absolute;
+      left: 0px;
+    }
+
+    .d2:hover > img {
+      position: absolute;
+      left: -2800px;
+      transition: left 1s steps(28);
+    }
+
+
+  </style>
+
+</head>
+<body>
+  <div class="d1">
+
+    <img src="" alt="">
+  </div>
+
+  <div class="d2">
+    <img src="heart.png" alt="">
+  </div>
+
+
+</body>
+</html>
