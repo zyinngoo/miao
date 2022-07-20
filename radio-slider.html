@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+
+  <style type="text/less">
+
+
+
+    body {
+      margin: 0;
+    }
+    .dd {
+      position: relative;
+      width: 500px;
+      height: 500px;
+
+      input {
+      display: none;
+     }
+
+    }
+
+    .d2 {
+      position: absolute;
+      bottom: 10px;
+      right: 10px;
+      z-index: 1000;
+
+      label {
+      display: inline-block;
+      width: 10px;
+      height: 10px;
+      background-color: gray;
+      }
+    }
+
+    .d1 img {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+
+      transition: 1s;
+      opacity: 0;
+    }
+
+    input:nth-child(1):checked ~ div img:nth-child(1),
+    input:nth-child(2):checked ~ div img:nth-child(2),
+    input:nth-child(3):checked ~ div img:nth-child(3),
+    input:nth-child(4):checked ~ div img:nth-child(4),
+    input:nth-child(5):checked ~ div img:nth-child(5)
+      {
+        opacity: 1;
+      }
+
+    input:nth-child(1):checked ~ div label:nth-child(1),
+    input:nth-child(2):checked ~ div label:nth-child(2),
+    input:nth-child(3):checked ~ div label:nth-child(3),
+    input:nth-child(4):checked ~ div label:nth-child(4),
+    input:nth-child(5):checked ~ div label:nth-child(5)
+      {
+        background-color: red;
+      }
+
+  </style>
+</head>
+<body>
+  <div class="dd">
+    <input type="radio" id="input1" name="radio1" checked>
+    <input type="radio" id="input2" name="radio1">
+    <input type="radio" id="input3" name="radio1">
+    <input type="radio" id="input4" name="radio1">
+    <input type="radio" id="input5" name="radio1">
+
+    <div class="d1">
+      <img src="picture/radio/1069.jpg" alt="">
+      <img src="picture/radio/1077.jpg" alt="">
+      <img src="picture/radio/1078.jpg" alt="">
+      <img src="picture/radio/1079.jpg" alt="">
+      <img src="picture/radio/1080.jpg" alt="">
+    </div>
+
+    <div class="d2">
+      <label for="input1"></label>
+      <label for="input2"></label>
+      <label for="input3"></label>
+      <label for="input4"></label>
+      <label for="input5"></label>
+    </div>
+  </div>
+
+</body>
+<script src="//cdnjs.cloudflare.com/ajax/libs/less.js/3.11.1/less.min.js" ></script>
+</html>

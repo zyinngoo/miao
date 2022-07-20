@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+
+  <style>
+
+    body {
+      margin: 0;
+    }
+
+    .dd {
+      position: relative;
+      width: 200px;
+      height: 100px;
+      margin: auto;
+    }
+
+    input {
+      display: none;
+    }
+
+
+    .d2 {
+      border: 1px solid;
+      box-shadow: 0px 0px 10px black;
+      width: 90px;
+      height: 90px;
+      border-radius: 100%;
+      position: absolute;
+      top: 5px;
+      left: 5px;
+      background-color: white;
+      z-index: 1000;
+      cursor: pointer;
+      transition: .5s ease;
+    }
+
+    .d1 {
+      border: 1px solid;
+      width: 200px;
+      height: 100px;
+      border-radius: 100px;
+      position: absolute;
+      background-color: white;
+      transition: .5s ease;
+    }
+
+    input:checked + .d2 {
+
+      position: absolute;
+      top: 5px;
+      left: 105px;
+
+    }
+
+    input:checked ~ .d1 {
+      background-color: green;
+
+    }
+
+  </style>
+
+</head>
+<body>
+  <div class="dd">
+    <input type="checkbox" id="input1" class="d2">
+    <label for="input1" class="d2"></label>
+    <label class="d1"></label>
+  </div>
+
+
+</body>
+</html>

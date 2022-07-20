@@ -10,21 +10,30 @@
 
     body {
       margin: 0;
+      text-align: center;
     }
 
-    .d1 {
+    input {
+      display: none;
+    }
+
+    input + .d1 {
       background-image: url(heart.png);
       background-position: left;
+      display: inline-block;
       width: 100px;
       height: 100px;
-      margin: auto;
 
     }
 
-    .d1:hover {
+    input:checked + .d1 {
       background-position: right;
       transition: background-position 1s steps(28);
     }
+
+
+
+
 
     .d2 {
       margin: auto;
@@ -34,7 +43,7 @@
       position: relative;
     }
 
-    img {
+    .d2 img {
       position: absolute;
       left: 0px;
     }
@@ -50,15 +59,17 @@
 
 </head>
 <body>
-  <div class="d1">
+  <input type="checkbox" class="d1" id="input1">
 
-    <img src="" alt="">
-  </div>
+  <label for="input1" class="d1"></label>
 
   <div class="d2">
     <img src="heart.png" alt="">
   </div>
 
+  <p>
+    第一个点击，第二个触碰
+  </p>
 
 </body>
 </html>
