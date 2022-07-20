@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+
+  <style type="text/less">
+    body {
+  font-size:0px;
+}
+.image > div {
+  position: absolute;
+  border: 2px solid;
+  height: 300px;
+  width: 400px;
+  overflow: hidden;
+    div {
+    display: inline-block;
+    border:2px solid;
+    box-sizing:border-box;
+    height:100%;
+    width: 100px;
+    margin:0;
+    position: relative;
+    overflow: hidden;
+
+
+      img {
+      height:100%;
+      width:400px;
+      position: absolute;
+      transition: 1s;
+      left: 400px;
+      xopacity: 0;
+      overflow: hidden;
+      }
+    }
+}
+
+
+.image div div:nth-child(2) img {
+  position: absolute;
+  left:-100px;
+}
+
+.image div div:nth-child(3) img {
+  position: absolute;
+  left:-200px;
+}
+
+.image div div:nth-child(4) img {
+  position: absolute;
+  left:-300px;
+}
+
+
+.maxdiv input:nth-child(1):checked ~ .image .d1 div img ,
+.maxdiv input:nth-child(2):checked ~ .image .d2 div img ,
+.maxdiv input:nth-child(3):checked ~ .image .d3 div img ,
+.maxdiv input:nth-child(4):checked ~ .image .d4 div img
+  {
+    xopacity: 1;
+    left: 0px;
+    z-index: 100;
+  }
+.maxdiv input:nth-child(1):checked ~ .d4 label:nth-child(1),
+.maxdiv input:nth-child(2):checked ~ .d4 label:nth-child(2),
+.maxdiv input:nth-child(3):checked ~ .d4 label:nth-child(3),
+.maxdiv input:nth-child(4):checked ~ .d4 label:nth-child(4)
+  {
+    xbackground-color: red;
+  }
+
+  </style>
+</head>
+<body>
+  <div class="maxdiv">
+
+    <input type="radio" id="in1" name="radio1" checked>
+    <input type="radio" id="in2" name="radio1">
+    <input type="radio" id="in3" name="radio1">
+    <input type="radio" id="in4" name="radio1">
+
+    <div class="image">
+      <div class="d1">
+        <div><img src="picture/radio/titan-1.jpg" alt=""></div>
+        <div><img src="picture/radio/titan-1.jpg" alt=""></div>
+        <div><img src="picture/radio/titan-1.jpg" alt=""></div>
+        <div><img src="picture/radio/titan-1.jpg" alt=""></div>
+      </div>
+
+      <div class="d2">
+        <div><img src="picture/radio/titan-2.jpg" alt=""></div>
+        <div><img src="picture/radio/titan-2.jpg" alt=""></div>
+        <div><img src="picture/radio/titan-2.jpg" alt=""></div>
+        <div><img src="picture/radio/titan-2.jpg" alt=""></div>
+      </div>
+
+      <div class="d3">
+        <div><img src="picture/radio/titan-3.jpg" alt=""></div>
+        <div><img src="picture/radio/titan-3.jpg" alt=""></div>
+        <div><img src="picture/radio/titan-3.jpg" alt=""></div>
+        <div><img src="picture/radio/titan-3.jpg" alt=""></div>
+      </div>
+
+      <div class="d4">
+        <div><img src="picture/radio/titan-4.jpg" alt=""></div>
+        <div><img src="picture/radio/titan-4.jpg" alt=""></div>
+        <div><img src="picture/radio/titan-4.jpg" alt=""></div>
+        <div><img src="picture/radio/titan-4.jpg" alt=""></div>
+    </div>
+
+    <div class="findiv">
+      <label for="in1"></label>
+      <label for="in2"></label>
+      <label for="in3"></label>
+      <label for="in4"></label>
+    </div>
+  </div>
+
+
+  </div>
+</body>
+<script src="//cdnjs.cloudflare.com/ajax/libs/less.js/3.11.1/less.min.js" ></script>
+</html>
