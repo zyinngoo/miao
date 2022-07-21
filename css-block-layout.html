@@ -35,8 +35,9 @@
     #d1 div {
       border: 3px solid black;
       background-color: pink;
-      width: 174px;
-      height: 34px;
+      width: 180px;
+      height: 40px;
+      box-sizing: border-box;
       margin-bottom: 15px;
       text-align: center;
       line-height: 34px;
@@ -94,17 +95,32 @@
       display: inline-block;
       background-color: pink;
       border: 3px solid;
-      width: 174px;
-      height: 34px;
+      width: 180px;
+      height: 40px;
+      box-sizing: border-box;
       text-align: center;
       line-height: 34px;
       margin: 8px 15px;
     }
 
+    .ddd {
+      display: flex;
+      width: 600px;
+      xheight: 220px;
+      margin: auto;
+      flex-flow:wrap;
+      xjustify-content: space-between;
+      xalign-content: space-between;
+      gap: 15px 30px ;
+    }
 
 
-    #d2 div:not(:nth-child(3n+1)) {
-      xmargin-left: 30px;
+    .ddd div {
+      border: 3px solid;
+      width: 180px;
+      height: 40px;
+      box-sizing: border-box;
+      background-color: pink;
 
     }
 
@@ -146,6 +162,21 @@
       <div>产品</div>
       <div>产品</div>
     </div>
+  </div>
+
+  <div class="ddd">
+    <div>宽180高40(包含边框)</div>
+    <div>产品</div>
+    <div>产品</div>
+    <div>水平间隙30px</div>
+    <div>产品</div>
+    <div>产品</div>
+    <div>垂直间隙15px</div>
+    <div>产品</div>
+    <div>产品</div>
+    <div>边框宽度3px</div>
+    <div>产品</div>
+    <div>产品</div>
   </div>
 
 
