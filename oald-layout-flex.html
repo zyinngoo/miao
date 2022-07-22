@@ -8,21 +8,19 @@
 
   <style type="text/less">
 
-    html {
+    html,body {
       height: 100%;
-      body {
-        margin: 0;
-        > div {
+      margin: 0;
+      body > div {
         display: flex;
         height: 100%;
         }
-      }
     }
 
 
     aside {
       width: 200px;
-      height: 100%;
+      flex: none;
       background-color: pink;
       display: flex;
       flex-flow: column;
@@ -30,12 +28,14 @@
         height: 50px;
         margin: 0px;
         padding: 20px;
+        flex: none;
       }
       div {
         height: 30px;
+        flex: none;
       }
       ul {
-        height: calc(100vh - 120px);
+        flex-grow: 1;
         margin: 0;
         overflow: auto;
       }
@@ -47,16 +47,19 @@
         }
 
     main {
-      width: calc( 100% - 600px);
+      flex-grow: 1;
       min-width: 200px;
       background-color: gold;
+      display: flex;
+      flex-flow: column;
       .fantasy {
         margin: 0;
         height: 100px;
-
+        flex: none;
       }
       .main {
-        height: calc(100vh - 100px);
+        xheight: calc(100vh - 100px);
+        flex-grow: 1;
         overflow: auto;
       }
     }
@@ -64,11 +67,13 @@
     .sidebar {
       width: 200px;
       background-color: gray;
+      flex: none;
     }
 
     .aside {
       width: 200px;
       background-color: peru;
+      flex: none;
     }
   </style>
 
