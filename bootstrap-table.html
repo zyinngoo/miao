@@ -33,7 +33,7 @@
       background-color: #f2f2f2;
     }
 
-    .table-spriped-column tr *:nth-child(even) {
+    .table-spriped-column tr :nth-child(even) {
       background-color: #f2f2f2;
     }
 
@@ -44,7 +44,7 @@
     }
 
     .table-hover tbody tr:hover {
-      background-color: #f2f2f2;
+      background-color: #ececec;
     }
 
     .border {
@@ -54,7 +54,7 @@
     }
 
     .border-less *{
-      border: none;
+      border: hidden;
     }
 
     .dark {
@@ -63,12 +63,12 @@
       caption {
         color: black;
       }
-      thead tr {
-        border-bottom: white 2px solid;
+      tr {
+        border-bottom: #373b3e 2px solid;
       }
     }
 
-    .dark tr:hover {
+    .dark.dark tbody tr:hover {
       background-color: #505357;
     }
   </style>
