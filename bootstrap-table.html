@@ -1,0 +1,387 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+
+  <style type="text/less">
+    html,body {
+      margin: 0;
+      height: 100%;
+    }
+
+    table {
+      text-align: center;
+      margin: auto;
+      margin-bottom: 50PX;
+      width: 100%;
+      border-collapse: collapse;
+      thead {
+        border-bottom: #212529 2px solid;
+      }
+      tr {
+        border-bottom: #dee2e6 1px solid;
+      }
+      td,th {
+        padding: 0.5em 0.5em;
+      }
+    }
+
+    .table-spriped-row tbody tr:nth-child(odd) {
+      background-color: #f2f2f2;
+    }
+
+    .table-spriped-column tr *:nth-child(even) {
+      background-color: #f2f2f2;
+    }
+
+    .table-sm {
+      td,th {
+        padding: 0.25em;
+      }
+    }
+
+    .table-hover tbody tr:hover {
+      background-color: #f2f2f2;
+    }
+
+    .border {
+      td,th  {
+        border: 1px solid black;
+      }
+    }
+
+    .border-less *{
+      border: none;
+    }
+
+    .dark {
+      color: white;
+      background-color: rgb(33, 37, 41);
+      caption {
+        color: black;
+      }
+      thead tr {
+        border-bottom: white 2px solid;
+      }
+    }
+
+    .dark tr:hover {
+      background-color: #505357;
+    }
+  </style>
+</head>
+
+
+
+
+<body>
+
+
+  <table>
+    <caption>JUST TABLE</caption>
+    <thead>
+      <tr>
+        <th>flex</th>
+        <th>justify-content</th>
+        <th>align-items/content</th>
+        <th>flex-direction</th>
+        <th>flex-wrap</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <th>1</th>
+        <td>start</td>
+        <td>space-around</td>
+        <td>row</td>
+        <td>wrap</td>
+      </tr>
+
+      <tr>
+        <th>2</th>
+        <td>center</td>
+        <td>space-between</td>
+        <td>column</td>
+        <td>wrap-reverse</td>
+      </tr>
+
+      <tr>
+        <th>3</th>
+        <td>end</td>
+        <td>space-evenly</td>
+        <td>reverse</td>
+        <td>nowrap</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <table class="table-spriped-row">
+    <caption>SPRIPED ROW</caption>
+    <thead>
+      <tr>
+          <th>flex</th>
+          <th>justify-content</th>
+          <th>align-items/content</th>
+          <th>flex-direction</th>
+          <th>flex-wrap</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+          <th>1</th>
+          <td>start</td>
+          <td>space-around</td>
+          <td>row</td>
+          <td>wrap</td>
+      </tr>
+
+      <tr>
+          <th>2</th>
+          <td>center</td>
+          <td>space-between</td>
+          <td>column</td>
+          <td>wrap-reverse</td>
+      </tr>
+
+      <tr>
+          <th>3</th>
+          <td>end</td>
+          <td>space-evenly</td>
+          <td>reverse</td>
+          <td>nowrap</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <table class="table-spriped-column">
+    <caption>SPRIPED COLUMN</caption>
+    <thead>
+      <tr>
+        <th>flex</th>
+        <th>justify-content</th>
+        <th>align-items/content</th>
+        <th>flex-direction</th>
+        <th>flex-wrap</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <th>1</th>
+        <td>start</td>
+        <td>space-around</td>
+        <td>row</td>
+        <td>wrap</td>
+      </tr>
+
+      <tr>
+        <th>2</th>
+        <td>center</td>
+        <td>space-between</td>
+        <td>column</td>
+        <td>wrap-reverse</td>
+      </tr>
+
+      <tr>
+        <th>3</th>
+        <td>end</td>
+        <td>space-evenly</td>
+        <td>reverse</td>
+        <td>nowrap</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <table class="table-sm">
+    <caption>TABLE-SM</caption>
+    <thead>
+      <tr>
+        <th>flex</th>
+        <th>justify-content</th>
+        <th>align-items/content</th>
+        <th>flex-direction</th>
+        <th>flex-wrap</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <th>1</th>
+        <td>start</td>
+        <td>space-around</td>
+        <td>row</td>
+        <td>wrap</td>
+      </tr>
+
+      <tr>
+        <th>2</th>
+        <td>center</td>
+        <td>space-between</td>
+        <td>column</td>
+        <td>wrap-reverse</td>
+      </tr>
+
+      <tr>
+        <th>3</th>
+        <td>end</td>
+        <td>space-evenly</td>
+        <td>reverse</td>
+        <td>nowrap</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <table class="table-hover">
+    <caption>TABLE-HOVER</caption>
+    <thead>
+      <tr>
+        <th>flex</th>
+        <th>justify-content</th>
+        <th>align-items/content</th>
+        <th>flex-direction</th>
+        <th>flex-wrap</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <th>1</th>
+        <td>start</td>
+        <td>space-around</td>
+        <td>row</td>
+        <td>wrap</td>
+      </tr>
+
+      <tr>
+        <th>2</th>
+        <td>center</td>
+        <td>space-between</td>
+        <td>column</td>
+        <td>wrap-reverse</td>
+      </tr>
+
+      <tr>
+        <th>3</th>
+        <td>end</td>
+        <td>space-evenly</td>
+        <td>reverse</td>
+        <td>nowrap</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <table class="border">
+    <caption>TABLE-BORDER</caption>
+    <thead>
+      <tr>
+        <th>flex</th>
+        <th>justify-content</th>
+        <th>align-items/content</th>
+        <th>flex-direction</th>
+        <th>flex-wrap</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <th>1</th>
+        <td>start</td>
+        <td>space-around</td>
+        <td>row</td>
+        <td>wrap</td>
+      </tr>
+
+      <tr>
+        <th>2</th>
+        <td>center</td>
+        <td>space-between</td>
+        <td>column</td>
+        <td>wrap-reverse</td>
+      </tr>
+
+      <tr>
+        <th>3</th>
+        <td>end</td>
+        <td>space-evenly</td>
+        <td>reverse</td>
+        <td>nowrap</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <table class="border-less">
+    <caption>TABLE-BORDER-LESS</caption>
+    <thead>
+      <tr>
+        <th>flex</th>
+        <th>justify-content</th>
+        <th>align-items/content</th>
+        <th>flex-direction</th>
+        <th>flex-wrap</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <th>1</th>
+        <td>start</td>
+        <td>space-around</td>
+        <td>row</td>
+        <td>wrap</td>
+      </tr>
+
+      <tr>
+        <th>2</th>
+        <td>center</td>
+        <td>space-between</td>
+        <td>column</td>
+        <td>wrap-reverse</td>
+      </tr>
+
+      <tr>
+        <th>3</th>
+        <td>end</td>
+        <td>space-evenly</td>
+        <td>reverse</td>
+        <td>nowrap</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <table class="dark">
+    <caption>TABLE-DARK</caption>
+    <thead>
+      <tr>
+        <th>flex</th>
+        <th>justify-content</th>
+        <th>align-items/content</th>
+        <th>flex-direction</th>
+        <th>flex-wrap</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <th>1</th>
+        <td>start</td>
+        <td>space-around</td>
+        <td>row</td>
+        <td>wrap</td>
+      </tr>
+
+      <tr>
+        <th>2</th>
+        <td>center</td>
+        <td>space-between</td>
+        <td>column</td>
+        <td>wrap-reverse</td>
+      </tr>
+
+      <tr>
+        <th>3</th>
+        <td>end</td>
+        <td>space-evenly</td>
+        <td>reverse</td>
+        <td>nowrap</td>
+      </tr>
+    </tbody>
+</body>
+<script src="//cdnjs.cloudflare.com/ajax/libs/less.js/3.11.1/less.min.js" ></script>
+</html>
