@@ -1,0 +1,87 @@
+.h2 {
+        .h2-1 {
+          .long-pic {
+            width: 234px;
+            height: 614px;
+            display: inline-block;
+            img {
+              width: 234px;
+              height: 614px;
+            }
+          }
+          div {
+            float: right;
+            span {
+              transition: 0s 999999999s;
+              position: relative;
+              section {
+                transition: 0s 999999999s;
+                width: 992px;
+                height: 614px;
+                position: absolute;
+                right: 0;
+                visibility: hidden;
+                opacity: 0;
+                ul {
+                  width: 992px;
+                  height: 614px;
+                  li {
+                    float: left;
+                    text-align: center;
+                    margin-left:14px;
+                    width: 234px;
+                    height: 300px;
+                    img {
+                      width: 160px;
+                      height: 160px;
+                    }
+                    p {
+                      overflow: hidden;
+                      text-overflow: ellipsis;
+                      white-space: nowrap;
+                      font-size: 12px;
+                      line-height: 12px;
+                      margin: 0 10px 10px 10px;
+                    }
+                  }
+                  li:last-child {
+                    height: 100px;
+                    margin: auto;
+                    padding-top: 50px;
+                    div::after {
+                      content: "\E615";
+                      font-family:iconfont;
+                      font-size:16px;
+                    }
+                  }
+                }
+              }
+              &:hover {
+                color: rgb(255, 103, 0);
+                border-bottom: solid;
+                section {
+                  visibility: visible;
+                  transition:none;
+                }
+              }
+            }
+          }
+        }
+      }
+
+
+
+
+
+      &:hover {
+        color: rgb(255, 103, 0);
+        border-bottom: solid;
+        section {
+          visibility: visible;
+          transition:none;
+          }
+        }
+        &:hover section {
+          visibility: visible;
+          transition:none;
+        }
