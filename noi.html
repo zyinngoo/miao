@@ -20,23 +20,23 @@
   var b = Number ( prompt ( ) )
   var c = Number ( prompt ( ) )
   var d= (a + b) / c
-  console.log(d)
+  console.log(Math.floor(d))
 </script>
 
 <script type="x" id="ch0103/04">
   var a = Number ( prompt ( ) )
   var b = Number ( prompt ( ) )
   var c = a / b
-  var d = parseInt ( c )
+  var d = parseInt (c)
   var f = a % b
-  console.log( d , f )
+  console.log(d , f)
 </script>
 
 <script type="x" id="ch0103/05">
   var a = Number ( prompt ( ) )
   var b = Number ( prompt ( ) )
   var c = a / b
-  console.log( c )
+  console.log(c.toFixed(9))
 </script>
 
 <script type="x" id="ch0103/06">
@@ -66,8 +66,8 @@
 <script type="x" id="ch0103/09">
   var r = Number ( prompt ( ) )
   var d = 2 * r
-  var c = Math.PI * d
-  var s = Math.PI * r * r
+  var c = 3.14159 * d
+  var s = 3.14159 * r * r
   console.log( d.toFixed(4) , c.toFixed(4) , s.toFixed(4) )
 </script>
 
@@ -96,7 +96,7 @@
   var a = x % 10
   var b = ((x - x % 10 ) / 10 ) % 10
   var c = ((x - x % 100 ) / 100 ) % 10
-  console.log( a+""+b+""+c )
+  console.log( ""+a+b+c )
 </script>
 
 <script type="x" id="ch0103/14">
@@ -162,45 +162,81 @@
 </script>
 
 <script type="x" id="ch0104/01">
-  var x = Number ( prompt ( ) )
-  console.log( x > 0 ? "positive" : ( x === 0 ? "zero" : "negative") )
+  var n = Number ( prompt ( ) )
+  if (n > 0) {
+    console.log("positive")
+  } else if (n == 0) {
+    console.log("zero")
+  } else {
+    console.log("negative")
+  }
+
 </script>
 
 <script type="x" id="ch0104/02">
-  var a = Number ( prompt ( ) )
-  var b = Math.abs(a)
-  console.log( b.toFixed(2) )
+  var n = Number ( prompt ( ) )
+  if (n < 0) {
+    console.log(-n)
+  } else {
+    console.log(n)
+  }
 </script>
 
 <script type="x" id="ch0104/03">
   var x = Number ( prompt ( ) )
-  console.log( x % 2 === 0 ? "even" : "odd" )
+  if (x % 2 === 0) {
+    console.log("even")
+  } else {
+    console.log("odd")
+  }
 </script>
 
 <script type="x" id="ch0104/04">
   var x = prompt ( )
   var str = x.charCodeAt ()
-  console.log( str % 2 === 0 ? "NO" : "YES" )
+  if (str % 2 === 0) {
+    console.log("NO")
+  } else {
+    console.log("YES")
+  }
 </script>
 
 <script type="x" id="ch0104/05">
   var x = Number ( prompt ( ) )
   var y = Number ( prompt ( ) )
-  console.log( x > y ? ">" : ( x === y ? "=" : "<") )
+  if (x > y) {
+    console.log(">")
+  } else if (x === y) {
+    console.log("=")
+  } else {
+    console.log("<")
+  }
 </script>
 
 <script type="x" id="ch0104/06">
   var x = Number ( prompt ( ) )
-  console.log( x >= 10 && x <= 100 ? "1" : "0" )
+  if (x >= 10 && x <= 100) {
+    console.log("1")
+  } else {
+    console.log("0")
+  }
 </script>
 
 <script type="x" id="ch0104/07">
   var x = Number ( prompt ( ) )
   var y = Number ( prompt ( ) )
-  console.log( x > 10 || y > 20 ? "1" : "0" )
+  if (x > 10 || y > 20) {
+    console.log("1")
+  } else {
+    console.log("0")
+  }
 </script>
 
 <script type="x" id="ch0104/08">
   var x = Number ( prompt ( ) )
-  console.log( x % 3 === 0 && x % 5 === 0 ? "YES" : "NO" )
+  if (x % 3 === 0 && x % 5 === 0) {
+    console.log("YES")
+  } else {
+    console.log("NO")
+  }
 </script>
