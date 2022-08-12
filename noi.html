@@ -301,7 +301,7 @@
   if (y < 60) {
     count = count + 1
   }
-  if (coount == 1) {
+  if (count == 1) {
     console.log(1)
   } else {
     console.log(0)
@@ -367,10 +367,10 @@
     max = a
   }
   if (b > max) {
-    max = a
+    max = b
   }
   if (c > max) {
-    max = a
+    max = c
   }
  console.log(max)
 
@@ -473,7 +473,7 @@
     counter = counter + 1
   }
 
-  console.log( (result / n).toFixed(2) )
+  console.log( (totalAge / n).toFixed(2) )
 </script>
 
 <script type="x" id="ch0105/02">
@@ -515,7 +515,7 @@
     num = num + 1
   }
 
-  console.log( "" + result , (result / n).toFixed(5) )
+  console.log( result , (result / n).toFixed(5) )
 </script>
 
 <script type="x" id="ch0105/05">
@@ -596,15 +596,13 @@
 </script>
 
 <script type="x" id="ch0105/09">
-  var counter = m
   var m = Number ( prompt ( ) )
   var n = Number ( prompt ( ) )
   var sum = 0
-
   if (m % 2 == 0) {
     m = m + 1
   }
-
+  var counter = m
   while ( counter <= n ) {
       sum = sum = counter
     counter = counter + 2
@@ -614,14 +612,13 @@
 </script>
 
 <script type="x" id="ch0105/10">
-  var counter = m
   var m = Number ( prompt ( ) )
   var n = Number ( prompt ( ) )
   var sum = 0
   if (m % 17 !== 0) {
     m = m + 17- m % 17
   }
-
+  var counter = m
   while ( counter <= n ) {
       sum = sum + counter
     counter = counter + 17
@@ -815,4 +812,43 @@
     counter = counter + 1
   }
   console.log( s.toFixed(4) , g.toFixed(7) )
+</script>
+
+<script type="x" id="ch0105/21">
+  var n = Number ( prompt () )
+  var counter = 0
+
+  while (n !== 1) {
+    if (n % 2 == 0) {
+      n = n / 2
+      console.log(2 * n + "/2=" + n)
+    } else {
+      n = n * 3 + 1
+      console.log(( n - 1 ) / 3 + "*3+1=" + n)
+    }
+  }
+  console.log( "End" )
+</script>
+
+<script type="x" id="ch0105/22">
+  var deposit = 0
+  var money = Number ( prompt () )
+  var balance = 0
+  var all = 0
+
+  for (var i = 2 ; i < 13 ; i ++) {
+
+    balance = balance + 300 - money - all + all % 100
+    var money = Number ( prompt () )
+    all = balance + 300 - money
+
+
+    if (all >= 100) {
+      deposit = deposit + all - all % 100
+    } else  if (all < 0){
+      console.log(-i)
+      i = 13
+    }
+  }
+  console.log(1.2 * deposit + all % 100)
 </script>
