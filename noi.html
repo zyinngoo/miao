@@ -604,7 +604,7 @@
   }
   var counter = m
   while ( counter <= n ) {
-      sum = sum = counter
+      sum = sum + counter
     counter = counter + 2
   }
 
@@ -716,6 +716,7 @@
 <script type="x" id="ch0105/16">
   var N = Number ( prompt () )
   var K = Number ( prompt () )
+
   var Y = 2
   var h = 200
   var money = 0
@@ -837,18 +838,174 @@
   var all = 0
 
   for (var i = 2 ; i < 13 ; i ++) {
-
     balance = balance + 300 - money - all + all % 100
     var money = Number ( prompt () )
     all = balance + 300 - money
-
 
     if (all >= 100) {
       deposit = deposit + all - all % 100
     } else  if (all < 0){
       console.log(-i)
-      i = 13
+      break ;
     }
   }
-  console.log(1.2 * deposit + all % 100)
+  if (i == 13) {
+    console.log(1.2 * deposit + all % 100)
+  }
+</script>
+
+<script type="x" id="ch0105/23">
+  var m = Number ( prompt () )
+  var n = Number ( prompt () )
+  var counter = 0
+  for (var i = 0 ; i < n ; i ++ ) {
+    var y = Number ( prompt () )
+    if (y <= m ) {
+      m = m - y
+    } else {
+      counter = counter + 1
+    }
+  }
+  console.log(counter)
+</script>
+
+<script type="x" id="ch0105/24">
+  var n = Number ( prompt () )
+  var hour = 0
+  var time = 0
+
+  for (var i = 0 ; i < n ; i ++ ) {
+    var high = Number ( prompt () )
+    var low = Number ( prompt () )
+
+    if (high >= 90 && high <= 140 && low >= 60 && low <= 90 ) {
+      hour = hour +1
+    } else {
+      hour = 0
+    }
+    if (hour >= time) {
+      time = hour
+    }
+  }
+  console.log(time)
+</script>
+
+<script type="x" id="ch0105/25">
+  var a = 0
+  var b = 0
+  var c = 1
+  var n7 = parseInt( Number("" + a + b + c) , 7 )
+  var n9 = parseInt( Number("" + c + b + a) , 9 )
+
+  while ( n7 !== n9 ) {
+    c = c + 1
+    if (c > 6) {
+      c = 0
+      b = b + 1
+    }
+    if (b > 6) {
+      b = 0
+      a = a + 1
+    }
+    n7 = parseInt( Number("" + a + b + c) , 7 )
+    n9 = parseInt( Number("" + c + b + a) , 9 )
+  }
+  console.log( n7 )
+  console.log( Number("" + a + b + c) )
+  console.log( Number("" + c + b + a) )
+
+</script>
+
+<script type="x" id="ch0105/26">
+  var n = Number ( prompt () )
+  var counter = 0
+  var result = 0
+  var time = 0
+  var a = 0
+  var b = 0
+  var c = 0
+  var d = 0
+
+  for ( var i = 0 ; i < n ; i++ ) {
+    var number = Number ( prompt () )
+    a = number % 10
+    d = ( number - number % 1000 ) / 1000
+    c = ( ( number % 1000 ) - (number % 100) ) / 100
+    b = ( ( number % 100 ) - (number % 10) ) / 10
+    result = a - b - c - d
+    if (result  > 0 ) {
+      time = time + 1
+    }
+  }
+  console.log(time)
+
+</script>
+
+<script type="x" id="ch0105/27">
+  var k = Number ( prompt () )
+  var n = 1
+  var s = 1
+  while (s <= k ) {
+    n = n + 1
+    s = s + 1 / n
+  }
+  console.log(n)
+</script>
+
+<script type="x" id="ch0105/28">
+  var number = Number ( prompt () )
+  var a = 0
+  var zhishu = 0
+
+  while ( number > 10 **  zhishu ) {
+    a = ( ( number % ( 10 ** ( zhishu + 1) ) ) - (number % ( 10 ** zhishu ) ) ) / ( 10 ** zhishu )
+    zhishu = zhishu + 1
+    console.log(a)
+
+  }
+</script>
+
+<script type="x" id="ch0105/29">
+  var number = Number ( prompt () )
+  var a = 0
+  var zhishu = 0
+
+
+
+
+</script>
+
+<script type="x" id="ch0105/30">
+  var m = Number ( prompt () )
+  var k = Number ( prompt () )
+
+  var a = 0
+  var zhishu = 0
+  var time = 0
+
+  while ( m > 10 **  zhishu ) {
+    a = ( ( m % ( 10 ** ( zhishu + 1) ) ) - ( m % ( 10 ** zhishu ) ) ) / ( 10 ** zhishu )
+    zhishu = zhishu + 1
+    if ( a == 3 ) {
+      time = time + 1
+    }
+  }
+  if ( time == k && m % 19 == 0) {
+    console.log("YES")
+  } else {
+    console.log("NO")
+  }
+
+</script>
+
+<script type="x" id="ch0105/31">
+  var n = Number ( prompt () )
+  var m = Number ( prompt () )
+
+  for (var i = 1 ; i < m ; i++ ) {
+    if (i * i < n) {
+      console.log(i * i)
+    }
+  }
+
 </script>
