@@ -968,11 +968,15 @@
 <script type="x" id="ch0105/29">
   var number = Number ( prompt () )
   var a = 0
-  var zhishu = 0
+  var str = ""
 
+  while (number > 0 ) {
+    a = number % 10
+    str = str + a
+    number = Math.floor(number / 10 )
+  }
 
-
-
+  console.log(str)
 </script>
 
 <script type="x" id="ch0105/30">
@@ -1001,11 +1005,102 @@
 <script type="x" id="ch0105/31">
   var n = Number ( prompt () )
   var m = Number ( prompt () )
+  var str = "1"
 
-  for (var i = 1 ; i < m ; i++ ) {
-    if (i * i < n) {
-      console.log(i * i)
+  for (var i = 2 ; i <= n ; i++ ) {
+    var counter = 0
+    for (var j = 2 ; j <= m ; j ++) {
+      if ( i % j == 0) {
+        counter += 1
+      }
+    }
+    if (counter % 2 == 0) {
+      str = str + "," + i
     }
   }
+  console.log(str)
 
+</script>
+
+<script type="x" id="ch0105/32">
+  var n = Number ( prompt () )
+  var s = 2
+  var p = 1
+  var q = 2
+
+  for (var i = 1 ; i < n ; i++ ) {
+    q = p + q
+    p = q - p
+    var number = q / p
+    s = s + number
+  }
+
+  console.log(s.toFixed(4))
+
+</script>
+
+<script type="x" id="ch0105/33">
+  var n = Number ( prompt () )
+  var s = 1
+
+
+  for (var i = 1 ; i < n ; i++ ) {
+    s = s + ((-1) ** i) * 1 / n
+  }
+
+  console.log(s.toFixed(4))
+
+</script>
+
+<script type="x" id="ch0105/34">
+  var n = Number ( prompt () )
+  var number = 1
+  var s = 1
+
+
+  for (var i = 1 ; i < n ; i++ ) {
+    number = number * (i + 1)
+    s = s + number
+  }
+
+  console.log(s)
+
+</script>
+
+<script type="x" id="ch0105/35">
+  var n = Number ( prompt () )
+  var number = 1
+  var e = 1
+
+
+  for (var i = 0 ; i < n ; i++ ) {
+    number = number * (i + 1)
+    e = e + 1 / number
+  }
+
+  console.log(e.toFixed(10))
+</script>
+
+<script type="x" id="ch0105/36">
+  var x = Number ( prompt () )
+  var n = Number ( prompt () )
+  var number = 1
+  var s = 0
+
+
+  for (var i = 0 ; i < n ; i++ ) {
+    number = n - i
+    s = s + x ** number
+  }
+
+  console.log(s + 1)
+</script>
+
+<script type="x" id="ch0105/45">
+  var n = Number ( prompt () )
+  var money = 0
+
+  for (var i = 0 ; i < n ; i++ ) {
+
+  }
 </script>
