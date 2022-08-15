@@ -182,20 +182,26 @@
 
   // 画一个实心的圆，半径至少为100像素
 
-  var x = 400 ;
-  var y = 300 ;
-  dot ( x , y , "black" )
-  for ( var i = 0 ; i < 400 ; i++) {
-    y = Math.sqrt (10000 - ( x - 400 ) ** 2)
-    if ( i < 100 || i > 300 ) {
-      y = -y + 300
-      dot ( x++ , y  , "pink" )
-    } else {
-      y = y +300
-      dot ( x-- , y  , "pink" )
+  var x = 0 ;
+  var y = 0 ;
+  for (var i = 1 ; i <= 100 ; i++ ) { // 半径
+    for ( var j = 1 ; j <= 360 ; j++ ) { //
+      x = Math.cos(j) * i + 400
+      y = Math.sin(j) * i + 300
+      dot(x , y , "red")
     }
   }
+
+
+
   // 画一个【大小合适】的sin(x)的图像
+
+  var x = 300 ;
+  var y = 0 ;
+  for (var i = 1 ; i <= 200 ; i++ ) {
+      y = 1 * Math.sin(x) + 100
+      dot(x++ , y , "red")
+  }
 
   // 画出rgb色彩空间的某一面（尺寸要大于100x100）
   //  'rgb(255,255,0)'
