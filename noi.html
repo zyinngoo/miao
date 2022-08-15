@@ -847,7 +847,10 @@
       break ;
     }
   }
-  console.log(1.2 * deposit + all % 100)
+  if ( i == 13  ) {
+    console.log(1.2 * deposit + all % 100)
+  }
+
 
 </script>
 
@@ -910,6 +913,25 @@
   console.log( n7 )
   console.log( Number("" + a + b + c) )
   console.log( Number("" + c + b + a) )
+
+</script>
+
+<script type="x" id="ch0105/25">
+  for (var x = 81 ; x <= 342 ; x++ ) {
+    var a7 = x % 7
+    var b7 = (x - a7) / 7 % 7
+    var c7 = (x - a7 - b7 * 7) / 7 / 7 % 7
+
+    var a9 = x % 9
+    var b9 = (x - a9) / 9 % 9
+    var c9 = (x - a9 - b9 * 9) / 9 / 9 % 9
+
+    if (a7 == c9 && b7 == b9 && a9 == c7) {
+      console.lox(x)
+      console.lox("" + c7 + b7 + a7)
+      console.lox("" + a9 + b9 + c9)
+    }
+  }
 
 </script>
 
@@ -1105,7 +1127,7 @@
 
   for (var i = 1 ; i <= n ; i++ ) {
     sum = sum + i * i
-    if (i % 7 !== 0 ) {
+    if (i % 7 == 0 ) {
       sum = sum - i * i
     } else if (i % 10 == 7 || (i / 100) % 10 == 7) {
       sum = sum - i * i
@@ -1139,7 +1161,7 @@
   console.log(counter)
 </script>
 
-<script type="x" id="ch0105/40">
+<script type="x" id="ch0105/41">
   var l = Number ( prompt () )
   var r = Number ( prompt () )
   var counter = 0
