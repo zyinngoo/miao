@@ -817,8 +817,6 @@
 
 <script type="x" id="ch0105/21">
   var n = Number ( prompt () )
-  var counter = 0
-
   while (n !== 1) {
     if (n % 2 == 0) {
       n = n / 2
@@ -849,9 +847,8 @@
       break ;
     }
   }
-  if (i == 13) {
-    console.log(1.2 * deposit + all % 100)
-  }
+  console.log(1.2 * deposit + all % 100)
+
 </script>
 
 <script type="x" id="ch0105/23">
@@ -966,17 +963,23 @@
 </script>
 
 <script type="x" id="ch0105/29">
-  var number = Number ( prompt () )
+  var n = Number ( prompt () )
+  var number = Math.abs(n)
   var a = 0
   var str = ""
+
 
   while (number > 0 ) {
     a = number % 10
     str = str + a
     number = Math.floor(number / 10 )
   }
+  if (n > 0) {
+    console.log(Number(str))
+  } else {
+    console.log(Number(str) * (-1))
+  }
 
-  console.log(str)
 </script>
 
 <script type="x" id="ch0105/30">
@@ -1093,14 +1096,68 @@
     s = s + x ** number
   }
 
-  console.log(s + 1)
+  console.log((s + 1).toFixed(2))
 </script>
 
-<script type="x" id="ch0105/45">
+<script type="x" id="ch0105/39">
   var n = Number ( prompt () )
-  var money = 0
+  var sum = 0
 
-  for (var i = 0 ; i < n ; i++ ) {
+  for (var i = 1 ; i <= n ; i++ ) {
+    sum = sum + i * i
+    if (i % 7 !== 0 ) {
+      sum = sum - i * i
+    } else if (i % 10 == 7 || (i / 100) % 10 == 7) {
+      sum = sum - i * i
+    }
+  }
+  console.log(sum)
+</script>
+
+<script type="x" id="ch0105/40">
+  var n = Number ( prompt () )
+  var counter = 0
+
+  for (var i = 1 ; i <= n ; i++ ) {
+    if (i % 10 == 1) {
+      counter += 1
+    }
+    if (Math.floor(i / 10) % 10 == 1) {
+      counter += 1
+    }
+    if (Math.floor(i / 100) % 10 == 1) {
+      counter += 1
+    }
+    if (Math.floor(i / 1000) % 10 == 1) {
+      counter += 1
+    }
+    if (i == 10000 ) {
+      counter += 1
+    }
 
   }
+  console.log(counter)
+</script>
+
+<script type="x" id="ch0105/40">
+  var l = Number ( prompt () )
+  var r = Number ( prompt () )
+  var counter = 0
+
+  for (var i = l ; i <= r ; i++ ) {
+    if (i % 10 == 2) {
+      counter += 1
+    }
+    if (Math.floor(i / 10) % 10 == 2) {
+      counter += 1
+    }
+    if (Math.floor(i / 100) % 10 == 2) {
+      counter += 1
+    }
+    if (Math.floor(i / 1000) % 10 == 2) {
+      counter += 1
+    }
+
+  }
+  console.log(counter)
 </script>
