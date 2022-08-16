@@ -1360,7 +1360,7 @@
 
 <script type="x" id="prime">
   var n = Number ( prompt ( ) )
-  var 该数为素数 = true
+  var 该数为素数 = false
 
   for ( var i = 2 ; i < n ; i++ ) {
     if ( n % i == 0) {
@@ -1369,7 +1369,9 @@
       break
     }
   }
-  if (该数为素数) {
+  if (n = 1) {
+    console.log("NO")
+  } else if (该数为素数) {
     console.log("YES")
   }
 </script>
@@ -1391,7 +1393,8 @@
 
 <script type="x" id="itob">
 
-  var n = Number ( prompt ( ) )
+  var N = Number ( prompt ( ) )
+  var n = Math.abs(N)
   var str = 0
   var result = ""
 
@@ -1400,7 +1403,11 @@
     result = str + result
     n = Math.floor( n / 10 )
   }
-  console.log(result)
+  if (N > 0) {
+    console.log(result)
+  } else {
+    console.log(-result)
+  }
 </script>
 
 <script type="x" id="sqrt">
@@ -1408,7 +1415,7 @@
   var n = Number ( prompt ( ) )
   var result = 0
 
-  for (var i = 0 ;  i++ ; ) {
+  for (var i = 0 ; i < Infinity ; i++ ) {
     if ( n < i * i ) {
       result = i - 1
       break
