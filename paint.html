@@ -72,15 +72,13 @@
 
   // 画一条实线
 
-  var x = 0 ;
-  for ( var i = 0 ; i < 600 ; i++) {
-    dot ( x++ , 50 , "black" )
+  for ( var x = 0 ; x < 600 ; x++) {
+    dot ( x , 50 , "black" )
   }
   // 画一条一个实点一个空点的虚线
 
-  var x = -2 ;
-  for ( var i = 0 ; i < 600 ; i++) {
-    dot ( x=x+2 , 55 , "black" )
+  for ( var x = 0 ; x < 600 ; x += 2) {
+    dot ( x , 55 , "black" )
   }
 
   // 画一条两个实点两个空点的虚线
@@ -93,11 +91,10 @@
 
   // 画一条三个实点两个空点的虚线
 
-  var x = -4 ;
-  for ( var i = 0 ; i < 600 ; i++) {
-    dot ( x = x + 4 , 65 , "black" )
-    dot ( x = x + 1 , 65 , "black" )
-    dot ( x = x + 1 , 65 , "black" )
+  for (var x = 0 ; x < 600 ; x++) {
+    if (x % 5 < 3 ) {
+      dot (x , 65 , "black")
+    }
   }
 
   // 画一条45度的斜线
@@ -109,19 +106,17 @@
   }
   // 画一条30度的斜线（与x轴或y轴的夹角呈30度）
 
-  var x = 50 ;
-  var y = 50 ;
-  for ( var i = 0 ; i < 50 ; i++) {
-    y = Math.sqrt(3) * x - 15
-    dot ( x++ , y , "pink" )
+
+  for ( var y = 0 ; y < 50 ; y++) {
+    var x = Math.sqrt(3) * y / 3 - 15
+    dot ( x + 50 , y + 70 , "pink" )
   }
 
   // 画一条跨越画布左上角和右下角的对角线
 
-  var x = 0 ;
-  for ( var i = 0 ; i < 500 ; i++) {
+  for ( var x = 0 ; x < 500 ; x++) {
     y = 0.8 * x
-    dot ( x++ , y , "gold" )
+    dot ( x , y , "gold" )
   }
 
   // 画一个空心矩形
@@ -158,37 +153,70 @@
   // 画两个个空心的圆，居中：
   // * 一个半径为50像素
 
-  var x = 250 ;
-  var y = 200 ;
-  dot ( x , y , "black" )
-  for ( var i = 0 ; i < 200 ; i++) {
-    y = Math.sqrt (50 * 50 - ( x - 250 ) ** 2)
-    if ( i < 50 || i > 150 ) {
-      y = -y + 200
-      dot ( x++ , y , "pink" )
-    } else {
-      y = y + 200
-      dot ( x-- , y , "pink" )
-    }
+  var r = 50
+
+  for (var x = - r ; x <=  r ;  x++ ) {
+    var y = Math.sqrt(r * r - x * x)
+    dot ( x + 250, y + 200, 'black')
+    dot ( x + 250 , -y + 200, 'black')
+  }
+  for (var y = -r ; y <= r ;  y++ ) {
+    var x = Math.sqrt(r * r - y * y)
+    dot ( x + 250, y + 200, 'black')
+    dot ( -x + 250 , y + 200, 'black')
   }
 
   // * 一个半径为200像素
 
-  var x = 250 ;
-  var y = 200 ;
-  for ( var i = 0 ; i < 360 ; i++) {
-  dot ( x + Math.sin(i * Math.PI/180) * 200 , y + Math.cos(i * Math.PI/180) * 200 , "black")
+  var r = 70
+  var x = 0
+  var y = r
+
+  while (x <= y) {
+    dot ( x + 250, y + 200, 'black')
+    dot ( x + 250, -y + 200, 'black')
+    dot ( -x + 250, y + 200, 'black')
+    dot ( -x + 250, -y + 200, 'black')
+    dot ( y + 250, x + 200, 'black')
+    dot ( y + 250, -x + 200, 'black')
+    dot ( -y + 250, x + 200, 'black')
+    dot ( -y + 250, -x + 200, 'black')
+
+    x++
+
+    var d1 = x * x + y * y
+    var d2 = x * x + (y - 1) * (y - 1)
+
+    if (Math.abs(d1 - r * r) >  Math.abs( d2 - r * r)) {
+    y--
+    }
   }
 
   // 画一个实心的圆，半径至少为100像素
 
-  var x = 0 ;
-  var y = 0 ;
-  for (var i = 1 ; i <= 100 ; i++ ) { // 半径
-    for ( var j = 1 ; j <= 360 ; j++ ) { //
-      x = Math.cos(j) * i + 400
-      y = Math.sin(j) * i + 300
-      dot(x , y , "red")
+
+  for (var r = 1 ; r <= 100 ; r++ ) { // 半径
+    var x = 0
+    var y = r
+
+    while (x <= y) {
+      dot ( x + 400, y + 300, 'black')
+      dot ( x + 400, -y + 300, 'black')
+      dot ( -x + 400, y + 300, 'black')
+      dot ( -x + 400, -y + 300, 'black')
+      dot ( y + 400, x + 300, 'black')
+      dot ( y + 400, -x + 300, 'black')
+      dot ( -y + 400, x + 300, 'black')
+      dot ( -y + 400, -x + 300, 'black')
+
+      x++
+
+      var d1 = x * x + y * y
+      var d2 = x * x + (y - 1) * (y - 1)
+
+      if (Math.abs(d1 - r * r) >  Math.abs( d2 - r * r)) {
+      y--
+       }
     }
   }
 
@@ -196,14 +224,25 @@
 
   // 画一个【大小合适】的sin(x)的图像
 
-  var x = 300 ;
+  var x = 200 ;
   var y = 0 ;
-  for (var i = 1 ; i <= 200 ; i++ ) {
-      y = 1 * Math.sin(x) + 100
-      dot(x++ , y , "red")
+  for (var i = 1 ; i <= 300 ; i++ ) {
+      y = 20 * Math.sin(x / 20) + 100
+      var color = 'hsl(' + x + ', 60% , 80% )'
+      dot(x++ , y , color)
   }
 
   // 画出rgb色彩空间的某一面（尺寸要大于100x100）
+
+
+  for ( var y = 0 ; y < 100 ; y++ ) {
+    for (var x = 0 ; x < 100 ; x++ ) {
+      var color = 'rgb(255,' + x * 2.55 +  ',' + y * 2.55 + ')'
+      var xx = x
+      var yy = y
+      dot(xx  , yy + 260 , color)
+    }
+  }
   //  'rgb(255,255,0)'
   //  '#ff00ff'
   // 如果做出上一题后，尝试将其每个点的坐标乘以一个矩阵（如(2,0,0,2)或(1,0.27得到新的位置，即绘制出被线性变幻后的色彩空间某一面
