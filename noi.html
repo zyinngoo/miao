@@ -1359,21 +1359,18 @@
 </script>
 
 <script type="x" id="prime">
-  var n = Number ( prompt ( ) )
-  var 该数为素数 = false
 
-  for ( var i = 2 ; i < n ; i++ ) {
-    if ( n % i == 0) {
-      该数为素数 = false
-      console.log("NO")
-      break
+  function isPrime(n) {
+    var end = Math.sqrt(n)
+    for ( var i = 2 ; i < end ; i++ ) {
+      if ( n % i == 0) {
+        return false
     }
+    return true
   }
-  if (n = 1) {
-    console.log("NO")
-  } else if (该数为素数) {
-    console.log("YES")
-  }
+  var n = Number ( prompt ( ) )
+  isPrime(n)
+
 </script>
 
 <script type="x" id="primes">
@@ -1415,29 +1412,115 @@
   var n = Number ( prompt ( ) )
   var result = 0
 
-  for (var i = 0 ; i < Infinity ; i++ ) {
-    if ( n < i * i ) {
-      result = i - 1
-      break
+</script>
+
+<script type="x" id="complete-number">
+
+  function isCompleteNumber(n) {
+    var sum = 1
+    var end = Math.sqrt(n)
+
+    for (var i = 2 ; i < end ; i++ ) {
+      if (n % i == 0) {
+        var j = n / i
+        sum += i + j
+      }
+    }
+    if (end === Math.floor(end) ) {
+      sum += end
+    }
+    if (sum === n ) {
+      return true
+    } else {
+      return false
     }
   }
-  for (var i = 0.1 ; i < Infinity ; i += 0.1 ) {
-    if ( n < ( result + i ) ** 2 ) {
-      result = result + i - 0.1
-      break
+
+  var n = Number ( prompt ( ) )
+  isCompleteNumber(n)
+
+</script>
+
+<script type="x" id="complete-numbers">
+
+  function isCompleteNumber(n) {
+    var sum = 1
+    var end = Math.sqrt(n)
+
+    for (var i = 2 ; i < end ; i++ ) {
+      if (n % i == 0) {
+        var j = n / i
+        sum += i + j
+      }
+    }
+    if (end === Math.floor(end) ) {
+      sum += end
+    }
+    if (sum === n ) {
+      return true
+    } else {
+      return false
     }
   }
-  for (var i = 0.01 ; i < Infinity ; i += 0.01 ) {
-    if ( n < ( result + i ) ** 2 ) {
-      result = result + i - 0.01
-      break
+
+  for (var i = 1 ; i < 1000 ; i++ ) {
+    if (isCompleteNumber(i)) {
+      console.log(i)
     }
   }
-  for (var i = 0.001 ; i < Infinity ; i += 0.001 ) {
-    if ( n < ( result + i ) ** 2 ) {
-      result = result + i - 0.001
-      break
+
+</script>
+
+<script type="x" id="narcissistic">
+
+  function digitWidth(n) {
+    var w = 0
+    do {
+      var ge = n % 10
+      w++
+      n =( n - ge ) / 10
+
+    } while (n > 0)
+    return w
+  }
+
+  function isNarcissistic(n) {
+    var width = digitWidth(n)
+    var sum = 0
+
+    var m = n
+    while (n > 0 ) {
+      var ge = n % 10
+      sum += Math.pow(ge , width)
+      n = (n - ge) / 10
+    }
+    if (sum === m ) {
+      return true
+    } else {
+      return false
     }
   }
-  console.log(result)
+
+
+
+</script>
+
+<script type="x" id="palindrom">
+
+  function isPalindrom(n) {
+    var str = ''
+    var m = n
+    do {
+      var ge = n % 10
+      str += ge
+      n = (n - ge) /10
+    } while (n > 0)
+
+    if (Number.(str) == m) {
+      return true
+    } else {
+      return false
+    }
+  }
+
 </script>
