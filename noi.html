@@ -1490,7 +1490,9 @@
     return days % 7
   }
 
-  weekday(2022 , 8)
+  var y = Number( prompt())
+  var m = Number( prompt())
+  weekday(y , m)
 
 </script>
 
@@ -1566,7 +1568,11 @@
     }
   }
   var n = Number ( prompt ( ) )
-  isPrime(n)
+  if (isPrime(n)) {
+    console.log('YES')
+  } else {
+    console.log('NO')
+  }
 
 </script>
 
@@ -1645,7 +1651,7 @@
   }
 
   var n = Number ( prompt ( ) )
-  sqrt(n).toFixed(3)
+  Number(sqrt(n).toFixed(3))
 
 </script>
 
