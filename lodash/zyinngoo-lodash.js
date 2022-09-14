@@ -9,7 +9,7 @@ var zyinngoo = {
       }
       arr.push(ary[i])
     }
-    re.unshift()
+    re.push(arr).shift()
     return re
   }
 
