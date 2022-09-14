@@ -29,7 +29,7 @@ var zyinngoo = {
   difference:
     function(...arr) {
       return  arr.reduce((result, it) => {
-              var re = []
+      var re = []
               for (var i = 0; i < result.length; i++) {
                 if (!(it.includes(result[i])))
                   re.push(result[i])
@@ -37,5 +37,21 @@ var zyinngoo = {
               return re
             })
     },
+  fill:
+    function(array, value, start = 0, end = array.length) {
+      for (var i = start; i < end; i++) {
+        array[i] = value
+      }
+      return array
+    }
+  drop:
+    function(arr, n = 1) {
+      arr.splice(0, n)
+      return arr
+    }
+  findindex:
+    function(array, predicate = _.identity, fromIndex = 0) {
+
+    }
 
 }
