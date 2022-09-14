@@ -43,15 +43,15 @@ var zyinngoo = {
         array[i] = value
       }
       return array
-    }
+    },
   drop:
     function(arr, n = 1) {
       arr.splice(0, n)
       return arr
-    }
+    },
   findindex:
     function(array, predicate = _.identity, fromIndex = 0) {
 
-    }
+    },
 
 }
