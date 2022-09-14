@@ -14,7 +14,7 @@ var zyinngoo = {
     return re
   }
 
-  compact: function () {}
+  compact: function ()   {}
 
 
 
