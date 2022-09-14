@@ -27,14 +27,15 @@ var zyinngoo = {
     },
 
   difference:
-    function(ary1, ary2) {
-      var re = []
-      for (var i = 0; i < ary1.length; i++) {
-        if (!(ary2.includes(ary1[i]))) {
-          re.push(ary1[i])
-        }
-      }
-      return re
+    function(...arr) {
+      return  arr.reduce((result, it) => {
+              var re = []
+              for (var i = 0; i < result.length; i++) {
+                if (!(it.includes(result[i])))
+                  re.push(result[i])
+              }
+              return re
+            })
     },
 
 }
