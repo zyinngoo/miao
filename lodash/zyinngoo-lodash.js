@@ -13,7 +13,7 @@ var zyinngoo = {
       re.push(arr)
       re.shift()
       return re
-    }
+    },
 
   compact:
     function(ary) {
@@ -24,7 +24,7 @@ var zyinngoo = {
         }
       }
       return re
-    }
+    },
 
   difference:
     function(ary1, ary2) {
@@ -35,6 +35,6 @@ var zyinngoo = {
         }
       }
       return re
-    }
+    },
 
 }
