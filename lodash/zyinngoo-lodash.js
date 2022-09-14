@@ -9,7 +9,8 @@ var zyinngoo = {
       }
       arr.push(ary[i])
     }
-    return re.unshift()
+    re.unshift()
+    return re
   }
 
   compact: function () {}
