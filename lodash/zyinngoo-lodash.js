@@ -16,12 +16,22 @@ var zyinngoo = {
     }
 
   compact:
-    function (ary) {
+    function(ary) {
       var re = []
       for (var i = 0; i < ary.length; i++) {
-        if (ary[i] == Number(ary[i]) || ary[i] !== 0) {
-
+        if (Boolean(ary[i])) {
           re.push(ary[i])
+        }
+      }
+      return re
+    }
+
+  difference:
+    function(ary1, ary2) {
+      var re = []
+      for (var i = 0; i < ary1.length; i++) {
+        if (!(ary2.includes(ary1[i]))) {
+          re.push(ary1[i])
         }
       }
       return re
