@@ -99,4 +99,4 @@ var zyinngoo = function () {
       difference,
       fill,
     }
-}
+}()
